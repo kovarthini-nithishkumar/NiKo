@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Love Flipbook</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/turn.min.js"></script>
+</head>
+<body>
+  <div class="book" id="flipbook">
+    <div class="page cover">Our Love Story</div>
+    <div class="page">My dearest love,<br><br>This is our story, inked with memories and sealed with forever.<br><br>— Kovi</div>
+    <div class="page"><img src="images/photo1.jpg" alt="Memory 1"></div>
+    <div class="page open-when">Open When You're Sad<br><br>You’re allowed to feel down. I’ll be your reason to smile again.</div>
+    <div class="page open-when">Open When You Miss Me<br><br>I miss you too. Close your eyes and feel me holding your hand.</div>
+    <div class="page open-when">Open When You're Overthinking<br><br>Breathe. We’re okay. You’re enough, and I love you endlessly.</div>
+    <div class="page final">Forever Yours,<br><br>Kovi</div>
+  </div>
+
+  <audio autoplay loop controls style="display:block; margin: 20px auto;">
+    <source src="audio/love-song.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    $('#flipbook').turn({
+      width: 800,
+      height: 500,
+      autoCenter: true
+    });
+  </script>
+</body>
+</html>

@@ -1,36 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Love Flipbook</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/turn.min.js"></script>
+  <style>
+    body {
+      background: #fef4e8;
+      font-family: 'Georgia', serif;
+      color: #3e2c23;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    .book {
+      background: #fff8dc;
+      border: 2px solid #d8c4a3;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+      border-radius: 15px;
+      transform: rotate(-1deg);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #7a4e2c;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .flip {
+      transition: all 0.6s ease;
+    }
+
+    .flip:hover {
+      transform: rotate(1deg) scale(1.02);
+    }
+
+    audio {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .signature {
+      margin-top: 50px;
+      text-align: right;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-  <div class="book" id="flipbook">
-    <div class="page cover">Our Love Story</div>
-    <div class="page">My dearest love,<br><br>This is our story, inked with memories and sealed with forever.<br><br>— Kovi</div>
-    <div class="page"><img src="images/photo1.jpg" alt="Memory 1"></div>
-    <div class="page open-when">Open When You're Sad<br><br>You’re allowed to feel down. I’ll be your reason to smile again.</div>
-    <div class="page open-when">Open When You Miss Me<br><br>I miss you too. Close your eyes and feel me holding your hand.</div>
-    <div class="page open-when">Open When You're Overthinking<br><br>Breathe. We’re okay. You’re enough, and I love you endlessly.</div>
-    <div class="page final">Forever Yours,<br><br>Kovi</div>
+  <div class="book flip">
+    <h1>Our Love Story</h1>
+    <p>My dearest love,</p>
+    <p>This is our story, inked with memories and sealed with forever.</p>
+
+    <div class="section">
+      <h3>Open When You're Sad</h3>
+      <p>You're allowed to feel down. I'll be your reason to smile again.</p>
+    </div>
+
+    <div class="section">
+      <h3>Open When You Miss Me</h3>
+      <p>I miss you too. Close your eyes and feel me holding your hand.</p>
+    </div>
+
+    <div class="section">
+      <h3>Open When You're Overthinking</h3>
+      <p>Breathe. We're okay. You're enough, and I love you endlessly.</p>
+    </div>
+
+    <audio controls>
+      <source src="your-love-song.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p class="signature">Forever Yours,<br>Kovi</p>
   </div>
-
-  <audio autoplay loop controls style="display:block; margin: 20px auto;">
-    <source src="audio/love-song.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-
-  <script>
-    $('#flipbook').turn({
-      width: 800,
-      height: 500,
-      autoCenter: true
-    });
-  </script>
 </body>
 </html>
